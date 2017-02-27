@@ -1,0 +1,11 @@
+[functional tests] implement clickTestSubject helper
+
+Backports PR #10576
+
+**Commit 1:**
+[functional tests] implement clickTestSubject helper
+
+Calling `.findTestSubject().click()` seems to be particularly error prone. This helper combines to the two actions and wraps them in a retry so we don't have to keep scattering `PageObject.common.try()` calls throughout the tests.
+
+* Original sha: 14cc807b8a80c4413524dcb44fd603b698f55034
+* Authored by spalger <spalger@users.noreply.github.com> on 2017-02-24T20:08:33Z
